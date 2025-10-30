@@ -62,7 +62,8 @@ const CardNav = ({
         contentEl.style.position = 'static';
         contentEl.style.height = 'auto';
 
-        contentEl.offsetHeight;
+        // Force reflow to ensure height calculation is accurate
+        void contentEl.offsetHeight;
 
         const topBar = 60;
         const padding = 16;
